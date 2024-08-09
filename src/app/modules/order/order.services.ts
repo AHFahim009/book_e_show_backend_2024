@@ -73,6 +73,7 @@ const processOrder = async (orderId: string) => {
   if (!order) {
     throw new Error(`Order with id ${orderId} not found`);
   }
+  console.log(order.status);
 
   switch (order.status) {
     case 'Processing':

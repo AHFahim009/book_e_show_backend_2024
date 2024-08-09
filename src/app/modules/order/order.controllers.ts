@@ -43,8 +43,8 @@ const allOrder = catchAsync(async (req, res) => {
 })
 
 const getSingleOrder = catchAsync(async (req, res) => {
-  const { _id } = req.params
-  const result = await OrderServices.getSingleOrder(_id)
+  const { userId } = req.params
+  const result = await OrderServices.getSingleOrder(userId)
 
   const responseData = {
     statusCode: 200,
@@ -56,8 +56,8 @@ const getSingleOrder = catchAsync(async (req, res) => {
 })
 
 const processOrder = catchAsync(async (req, res) => {
-  const { _id } = req.params
-  const result = await OrderServices.processOrder(_id)
+  const { userId } = req.params
+  const result = await OrderServices.processOrder(userId)
 
   const responseData = {
     statusCode: 200,
@@ -68,8 +68,8 @@ const processOrder = catchAsync(async (req, res) => {
 })
 
 const deleteOrder = catchAsync(async (req, res) => {
-  const { _id } = req.params
-  const result = await OrderServices.deleteOrder(_id)
+  const { userId } = req.params
+  const result = await OrderServices.deleteOrder(userId)
 
   const responseData = {
     statusCode: 200,

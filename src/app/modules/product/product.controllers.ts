@@ -6,7 +6,10 @@ import sendResponse from "../../utils/sendResponse";
 import { ProductServices } from "./product.services";
 
 const createProduct = catchAsync(async (req, res) => {
+  console.log("controllers", req.body, req.file);
+
   const result = await ProductServices.createProduct(req.file, req.body);
+
 
   sendResponse(res, {
     statusCode: 200,

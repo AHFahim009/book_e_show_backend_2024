@@ -13,7 +13,9 @@
     "zod": "^3.22.4"
   },
   "scripts": {
-    "server": "ts-node-dev --respawn --transpile-only src/server.ts"
+    "start": "node dist/src/app.js",
+    "server": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",

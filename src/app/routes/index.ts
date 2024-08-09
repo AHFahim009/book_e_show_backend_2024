@@ -6,6 +6,7 @@ import { ProductRoutes } from "../modules/product/product.routes";
 import { PaymentRoutes } from "../modules/payment/payment.routes";
 import { OrderRoutes } from "../modules/order/order.routes";
 import { CouponRoutes } from "../modules/coupon/coupon.routes";
+import { DashboardStatsRoutes } from "../modules/DashboardStatistic/stats.routes";
 
 const router = Router()
 
@@ -40,6 +41,10 @@ const applicationRoutes: TApplicationRoutes = [
   {
     name: "/coupon",
     endPoints: CouponRoutes
+  },
+  {
+    name: "/dashboard",
+    endPoints: DashboardStatsRoutes
   },
 
 ]

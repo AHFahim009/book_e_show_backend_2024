@@ -8,6 +8,7 @@ import { searchableField } from "../../constantType"
 
 
 const createProduct = async (photo: any, payload: TProduct) => {
+  console.log(payload, photo);
 
 
   const session = await mongoose.startSession()
